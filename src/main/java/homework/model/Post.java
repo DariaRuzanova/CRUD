@@ -1,4 +1,4 @@
-package model;
+package homework.model;
 
 public class Post {
     private long id;

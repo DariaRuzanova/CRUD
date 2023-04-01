@@ -1,12 +1,13 @@
-package service;
+package homework.service;
 
 
-import exception.NotFoundException;
-import model.Post;
-import repository.PostRepository;
+import homework.exception.NotFoundException;
+import homework.repository.PostRepository;
+import homework.model.Post;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class PostService {
     private final PostRepository repository;
 
