@@ -1,9 +1,9 @@
-package servlet;
+package homework.servlet;
 
 
-import controller.PostController;
-import repository.PostRepository;
-import service.PostService;
+import homework.config.JavaConfig;
+import homework.controller.PostController;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,9 +19,11 @@ public class MainServlet extends HttpServlet {
 
     @Override
     public void init() {
-        final var repository = new PostRepository();
-        final var service = new PostService(repository);
-        controller = new PostController(service);
+        final var context = new AnnotationConfigApplicationContext(JavaConfig.class);
+        controller  = context.getBean(PostController.class);
+//        final var repository = new PostRepository();
+//        final var service = new PostService(repository);
+//        controller = new PostController(service);
     }
 
     @Override

@@ -1,9 +1,10 @@
-package service;
+package homework.service;
 
 
-import exception.NotFoundException;
-import model.Post;
-import repository.PostRepository;
+import homework.exception.NotFoundException;
+import homework.repository.PostRepository;
+import homework.model.Post;
+
 
 import java.util.List;
 

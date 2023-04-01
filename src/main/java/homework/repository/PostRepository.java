@@ -1,7 +1,8 @@
-package repository;
+package homework.repository;
 
-import exception.NotFoundException;
-import model.Post;
+import homework.exception.NotFoundException;
+import homework.model.Post;
+
 
 import java.util.Collections;
 import java.util.List;
