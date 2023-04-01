@@ -1,6 +1,7 @@
 package homework.servlet;
 
 
+import homework.config.JavaConfig;
 import homework.controller.PostController;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -18,7 +19,7 @@ public class MainServlet extends HttpServlet {
 
     @Override
     public void init() {
-        final var context = new AnnotationConfigApplicationContext("homework");
+        final var context = new AnnotationConfigApplicationContext(JavaConfig.class);
         controller  = context.getBean(PostController.class);
 //        final var repository = new PostRepository();
 //        final var service = new PostService(repository);
